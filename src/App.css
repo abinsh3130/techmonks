@@ -1,42 +1,41 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2D2F6D;
+  --secondary: #6366F1;
+  --accent: #F59E0B;
+  --dark: #1F2937;
+  --light: #F9FAFB;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-primary {
+  @apply bg-[#2D2F6D] hover:bg-[#1D1F4D] text-white font-medium py-2 px-4 rounded-md transition duration-300;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.btn-secondary {
+  @apply bg-[#6366F1] hover:bg-[#4F46E5] text-white font-medium py-2 px-4 rounded-md transition duration-300;
+}
+
+.btn-outline {
+  @apply border border-[#2D2F6D] text-[#2D2F6D] hover:bg-[#2D2F6D] hover:text-white font-medium py-2 px-4 rounded-md transition duration-300;
 }
 
 .card {
-  padding: 2em;
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
 }
 
-.read-the-docs {
-  color: #888;
+.section-title {
+  @apply text-3xl font-bold text-[#2D2F6D] mb-6;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
